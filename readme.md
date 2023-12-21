@@ -13,10 +13,10 @@
 [Link](https://github.com/karosi12/twn-devops/tree/main/cloud-basics)
 
 #### Artifact Repository Manager with Nexus
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/repository-manager)
 
 #### Container with Docker
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/container-docker)
 
 #### Build Automation & CI/CD with Jenkins
 [Link](https://example.com)
