@@ -7,10 +7,10 @@
 [Link](https://gitlab.com/karosi12/git-execrise-3)
 
 #### Package Manager Tools
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/build-tools-exercises)
 
 #### Cloud & Iaas Basics
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/cloud-basics)
 
 #### Artifact Repository Manager with Nexus
 [Link](https://example.com)
