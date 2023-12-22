@@ -11,26 +11,27 @@ pipeline {
         DOCKER_HUB_ID = "karosi12"
     }
     stages {
-        
-        stage("init") {
-            steps {
-                script {
-                    gv = load "script.groovy"
-            }
-        }
-        stage("increment version") {
-            steps {
-                script {
-                    gv.incrementVersion()
+
+            stage("init") {
+                steps {
+                    script {
+                        gv = load "script.groovy"
                 }
             }
-        }
-        stage("Build and push image") {
-            steps {
-                script {
-                    gv.buildAndPushDockerImage()
+            stage("increment version") {
+                steps {
+                    script {
+                        gv.incrementVersion()
+                    }
                 }
             }
-        }
-    }   
+            stage("Build and push image") {
+                steps {
+                    script {
+                        gv.buildAndPushDockerImage()
+                    }
+                }
+            }
+        } 
+    }     
 }
