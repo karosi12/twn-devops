@@ -42,7 +42,7 @@ def buildAndPushDockerImage(){
 
 def commitVersionUpdate(){
     withCredentials([usernamePassword(credentialsId: 'github-login', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-        # git config here for the first time run
+        // git config here for the first time run
         sh 'git config --global user.email "jenkins@example.com"'
         sh 'git config --global user.name "jenkins"'
         sh 'git remote set-url origin https://$USER:$PASS@https://github.com/karosi12/twn-devops.git'
