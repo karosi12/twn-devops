@@ -1,9 +1,9 @@
 def incrementVersion() {
     echo "Increment app version..."
-    sh "ls -la"
 
     dir("jenkins/jenkins-exercises/app/") {
         echo"Get here now.."
+         sh "ls -la"
         // # update application version in the package.json file with one of these release types: patch, minor or major
         // # this will commit the version update
         sh "npm version minor"

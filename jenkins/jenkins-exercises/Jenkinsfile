@@ -15,7 +15,7 @@ pipeline {
         stage("init") {
             steps {
                 script {
-                    sh "ls -la"
+                    // sh "ls -la"
                     gv = load "jenkins/jenkins-exercises/script.groovy"
                 }
             }
