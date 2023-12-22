@@ -4,7 +4,8 @@ def incrementVersion() {
     dir("jenkins/jenkins-exercises/app/") {
         sh "npm version minor"
 
-        // # read the updated version from the package.json file
+        // read the updated version from the package.json file
+        // Note: install pipline utility steps plugin
         def packageJson = readJSON file: 'package.json'
         def version = packageJson.version
         // # set the new version as part of IMAGE_NAME
@@ -41,7 +42,7 @@ def buildAndPushDockerImage(){
 }
 
 def commitVersionUpdate(){
-    withCredentials([usernamePassword(credentialsId: 'github-login', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+    withCredentials([usernamePassword(credentialsId: 'github-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
         // git config here for the first time run
         sh 'git config --global user.email  "jenkins@example.com"'
         sh 'git config --global user.name $USER'
