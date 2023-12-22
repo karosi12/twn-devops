@@ -1,6 +1,6 @@
 def incrementVersion() {
     echo "Increment app version..."
-    sh "pwd"
+    /**
     dir("jenkins-exercises/app") {
         echo"Get here now.."
         // # update application version in the package.json file with one of these release types: patch, minor or major
@@ -14,10 +14,11 @@ def incrementVersion() {
         // # set the new version as part of IMAGE_NAME
         env.IMAGE_NAME = "$version-$BUILD_NUMBER"
     }
+    */
 
-    // # alternative solution without Pipeline Utility Steps plugin: 
-    // # def version = sh (returnStdout: true, script: "grep 'version' package.json | cut -d '\"' -f4 | tr '\\n' '\\0'")
-    // # env.IMAGE_NAME = "$version-$BUILD_NUMBER"
+    //  alternative solution without Pipeline Utility Steps plugin: 
+    def version = sh (returnStdout: true, script: "grep 'version' package.json | cut -d '\"' -f4 | tr '\\n' '\\0'")
+    env.IMAGE_NAME = "$version-$BUILD_NUMBER"
 
 } 
 
@@ -27,6 +28,7 @@ def buildAndPushDockerImage(){
     //     sh 'echo $PASS | docker login -u $USER --password-stdin'
     //     sh "docker push ${DOCKER_HUB_ID}/myapp:${IMAGE_NAME}"
     // }
+    echo "buildAndPushDockerImage"
 }
 
 return this
