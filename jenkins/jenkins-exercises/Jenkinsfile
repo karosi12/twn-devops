@@ -15,7 +15,6 @@ pipeline {
         stage("init") {
             steps {
                 script {
-                    // sh "ls -la"
                     gv = load "jenkins/jenkins-exercises/script.groovy"
                 }
             }
@@ -27,13 +26,13 @@ pipeline {
                 }
             }
         }
-        // stage("Build and push image") {
-        //     steps {
-        //         script {
-        //             gv.buildAndPushDockerImage()
-        //         }
-        //     }
-        // }
+        stage("Build and push image") {
+            steps {
+                script {
+                    gv.buildAndPushDockerImage()
+                }
+            }
+        }
         
     }     
 }
