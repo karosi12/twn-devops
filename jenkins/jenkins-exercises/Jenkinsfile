@@ -5,12 +5,13 @@ def gv
 pipeline {
     agent any
     tools {
-        nodejs "node"
+        nodejs 'node'
     }
     environment {
         DOCKER_HUB_ID = "karosi12"
     }
     stages {
+        
         stage("init") {
             steps {
                 script {
