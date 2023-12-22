@@ -11,9 +11,11 @@ def incrementVersion() {
         // # read the updated version from the package.json file
         def packageJson = readJSON file: 'package.json'
         def version = packageJson.version
-
+        echo $version
+        echo $BUILD_NUMBER
         // # set the new version as part of IMAGE_NAME
         env.IMAGE_NAME = "$version-$BUILD_NUMBER"
+        echo env.IMAGE_NAME
     }
        /** */
 

@@ -27,13 +27,13 @@ pipeline {
                 }
             }
         }
-        stage("Build and push image") {
-            steps {
-                script {
-                    gv.buildAndPushDockerImage()
-                }
-            }
-        }
+        // stage("Build and push image") {
+        //     steps {
+        //         script {
+        //             gv.buildAndPushDockerImage()
+        //         }
+        //     }
+        // }
         
     }     
 }
