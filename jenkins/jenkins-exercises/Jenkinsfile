@@ -1,0 +1,26 @@
+#!/usr/bin/env groovy
+
+def gv
+
+pipeline {
+    agent any
+    tools {
+        nodejs "node"
+    }
+    environment {}
+    stages {
+        stage("init") {
+            steps {
+                script {
+                    gv = load "script.groovy"
+            }
+        }
+        stage("increment version") {
+            steps {
+                script {
+                    gv.incrementVersion()
+                }
+            }
+        }
+    }   
+}
