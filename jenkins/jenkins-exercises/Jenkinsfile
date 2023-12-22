@@ -12,26 +12,27 @@ pipeline {
     }
     stages {
 
-            stage("init") {
-                steps {
-                    script {
-                        gv = load "script.groovy"
+        stage("init") {
+            steps {
+                script {
+                    gv = load "script.groovy"
                 }
             }
-            stage("increment version") {
-                steps {
-                    script {
-                        gv.incrementVersion()
-                    }
+        }
+        stage("increment version") {
+            steps {
+                script {
+                    gv.incrementVersion()
                 }
             }
-            stage("Build and push image") {
-                steps {
-                    script {
-                        gv.buildAndPushDockerImage()
-                    }
+        }
+        stage("Build and push image") {
+            steps {
+                script {
+                    gv.buildAndPushDockerImage()
                 }
             }
-        } 
+        }
+        
     }     
 }
