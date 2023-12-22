@@ -1,8 +1,8 @@
 def incrementVersion() {
     echo "Increment app version..."
     sh "ls -la"
-    /**
-    dir("jenkins-exercises/app") {
+
+    dir("jenkins/jenkins-exercises/app/") {
         echo"Get here now.."
         // # update application version in the package.json file with one of these release types: patch, minor or major
         // # this will commit the version update
@@ -15,11 +15,11 @@ def incrementVersion() {
         // # set the new version as part of IMAGE_NAME
         env.IMAGE_NAME = "$version-$BUILD_NUMBER"
     }
-    */
+       /** */
 
     //  alternative solution without Pipeline Utility Steps plugin: 
-    def version = sh (returnStdout: true, script: "grep 'version' package.json | cut -d '\"' -f4 | tr '\\n' '\\0'")
-    env.IMAGE_NAME = "$version-$BUILD_NUMBER"
+    // def version = sh (returnStdout: true, script: "grep 'version' package.json | cut -d '\"' -f4 | tr '\\n' '\\0'")
+    // env.IMAGE_NAME = "$version-$BUILD_NUMBER"
 
 } 
 
