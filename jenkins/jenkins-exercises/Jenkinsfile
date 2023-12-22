@@ -26,6 +26,13 @@ pipeline {
                 }
             }
         }
+        stage("Run tests") {
+            steps {
+                script {
+                    gv.runTest()
+                }
+            }
+        }
         stage("Build and push image") {
             steps {
                 script {

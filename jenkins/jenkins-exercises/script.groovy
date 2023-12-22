@@ -19,8 +19,17 @@ def incrementVersion() {
     */
 } 
 
+def runTest() {
+    // enter app directory, because that's where package.json and tests are located
+    dir("jenkins/jenkins-exercises/app") {
+        //  install all dependencies needed for running tests
+        sh "npm install"
+        sh "npm run test"
+    } 
+}
+
 def buildAndPushDockerImage(){
-    dir("jenkins/jenkins-exercises/app/") {
+    dir("jenkins/jenkins-exercises") {
         sh "ls -la"
         withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]){
             sh "docker build -t ${DOCKER_HUB_ID}/myapp:${IMAGE_NAME} ."
