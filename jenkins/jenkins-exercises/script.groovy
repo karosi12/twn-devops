@@ -31,7 +31,7 @@ def runTest() {
 def buildAndPushDockerImage(){
     dir("jenkins/jenkins-exercises") {
         sh "ls -la"
-        withCredentials([usernamePassword(credentialsId: 'docker-login', usernameVariable: 'USER', passwordVariable: 'PASS')]){
+        withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]){
             sh "docker build -t ${DOCKER_HUB_ID}/myapp:${IMAGE_NAME} ."
             sh 'echo $PASS | docker login -u $USER --password-stdin'
             sh "docker push ${DOCKER_HUB_ID}/myapp:${IMAGE_NAME}"
