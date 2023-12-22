@@ -45,7 +45,7 @@ def commitVersionUpdate(){
         // git config here for the first time run
         sh 'git config --global user.email adekayor@gmail.com'
         sh 'git config --global user.name $USER'
-        sh 'git remote set-url origin https:$USER:$PASS//github.com/karosi12/twn-devops.git'
+        sh 'git remote set-url origin git@github.com/karosi12/twn-devops.git'
         sh 'git add .'
         sh 'git commit -m "ci: version bump"'
         sh 'git push origin HEAD:ft-jenkins'
