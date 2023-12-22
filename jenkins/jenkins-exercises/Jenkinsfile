@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh "ls -la"
-                    gv = load "script.groovy"
+                    gv = load "jenkins/jenkins-exercises/script.groovy"
                 }
             }
         }
