@@ -7,7 +7,9 @@ pipeline {
     tools {
         nodejs "node"
     }
-    environment {}
+    environment {
+        DOCKER_HUB_ID = "karosi12"
+    }
     stages {
         stage("init") {
             steps {
@@ -19,6 +21,13 @@ pipeline {
             steps {
                 script {
                     gv.incrementVersion()
+                }
+            }
+        }
+        stage("Build and push image") {
+            steps {
+                script {
+                    gv.buildAndPushDockerImage()
                 }
             }
         }
