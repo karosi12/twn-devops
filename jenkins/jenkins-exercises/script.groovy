@@ -1,5 +1,6 @@
 def incrementVersion() {
     echo "Increment app version..."
+    sh "ls -la"
     /**
     dir("jenkins-exercises/app") {
         echo"Get here now.."
