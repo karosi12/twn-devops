@@ -22,7 +22,7 @@ pipeline {
         stage("increment version") {
             when {
                 expression {
-                    return env.GIT_BRANCH == "master"
+                    return env.GIT_BRANCH == "main"
                 }
             }
             steps {
@@ -41,7 +41,7 @@ pipeline {
         stage("Build and push image") {
           when {
             expression {
-              return env.GIT_BRANCH == "master"
+              return env.GIT_BRANCH == "main"
             }
           }
         steps {
@@ -61,7 +61,7 @@ pipeline {
         stage("Commit version update") {
           when {
             expression {
-              return env.GIT_BRANCH == "master"
+              return env.GIT_BRANCH == "main"
             }
           }
         steps {
