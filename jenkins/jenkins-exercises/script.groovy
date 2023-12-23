@@ -38,7 +38,20 @@ def buildAndPushDockerImage(){
             sh "docker push ${DOCKER_HUB_ID}/myapp:${IMAGE_NAME}"
         }
     }
-    echo "buildAndPushDockerImage"
+    echo "success - docker build and push"
+}
+
+def deployImage(){
+    sh "ls -la"
+    def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME} ${DOCKER_HUB_ID}"
+    def ec2Instance = "ec2-user@18.197.112.185"
+
+    sshagent(['ec2-server-key']) {
+        sh "scp -o StrictHostKeyChecking=no jenkins/jenkins-exercises/server-cmds.sh ${ec2Instance}:/home/ec2-user"
+        sh "scp -o StrictHostKeyChecking=no jenkins/jenkins-exercises/docker-compose.yaml ${ec2Instance}:/home/ec2-user"
+        sh "ssh -o StrictHostKeyChecking=no ${ec2Instance} ${shellCmd}"
+    }     
+    echo "success - Deployed"
 }
 
 def commitVersionUpdate(){
