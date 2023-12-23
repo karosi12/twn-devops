@@ -22,7 +22,7 @@ pipeline {
         stage("increment version") {
             when {
                 expression {
-                    return env.GIT_BRANCH == "master"
+                    return env.GIT_BRANCH == "main"
                 }
             }
             steps {
@@ -39,18 +39,23 @@ pipeline {
             }
         }
         stage("Build and push image") {
-          when {
-            expression {
-              return env.GIT_BRANCH == "master"
+            when {
+                expression {
+                    return env.GIT_BRANCH == "master"
+                }
             }
-          }
-        steps {
-            script {
+            steps {
+                script {
                     gv.buildAndPushDockerImage()
                 }
             }
         }
         stage("Deploy to EC2") {
+            when {
+                expression {
+                    return env.GIT_BRANCH == "master"
+                }
+            }
             steps {
                 script {
                     gv.deployImage()
