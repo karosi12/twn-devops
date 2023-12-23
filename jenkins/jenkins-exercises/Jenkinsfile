@@ -11,26 +11,65 @@ pipeline {
         DOCKER_HUB_ID = "karosi12"
     }
     stages {
-        
+
         stage("init") {
             steps {
                 script {
-                    gv = load "script.groovy"
+                    gv = load "jenkins/jenkins-exercises/script.groovy"
+                }
             }
         }
         stage("increment version") {
+            when {
+                expression {
+                    return env.GIT_BRANCH == "master"
+                }
+            }
             steps {
                 script {
                     gv.incrementVersion()
                 }
             }
         }
-        stage("Build and push image") {
+        stage("Run tests") {
             steps {
                 script {
+                    gv.runTest()
+                }
+            }
+        }
+        stage("Build and push image") {
+          when {
+            expression {
+              return env.GIT_BRANCH == "master"
+            }
+          }
+        steps {
+            script {
                     gv.buildAndPushDockerImage()
                 }
             }
         }
-    }   
+        stage("Deploy to EC2") {
+            steps {
+                script {
+                    gv.deployImage()
+                }
+            }
+        }
+        /** 
+        stage("Commit version update") {
+          when {
+            expression {
+              return env.GIT_BRANCH == "master"
+            }
+          }
+        steps {
+                script {
+                    gv.commitVersionUpdate()
+                }
+            }
+        }
+        */
+    }     
 }
