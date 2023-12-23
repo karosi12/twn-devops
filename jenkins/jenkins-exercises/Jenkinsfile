@@ -20,6 +20,11 @@ pipeline {
             }
         }
         stage("increment version") {
+            when {
+                expression {
+                    return env.GIT_BRANCH == "master"
+                }
+            }
             steps {
                 script {
                     gv.incrementVersion()
@@ -34,8 +39,13 @@ pipeline {
             }
         }
         stage("Build and push image") {
-            steps {
-                script {
+          when {
+            expression {
+              return env.GIT_BRANCH == "master"
+            }
+          }
+        steps {
+            script {
                     gv.buildAndPushDockerImage()
                 }
             }
@@ -49,7 +59,12 @@ pipeline {
         }
         /** 
         stage("Commit version update") {
-            steps {
+          when {
+            expression {
+              return env.GIT_BRANCH == "master"
+            }
+          }
+        steps {
                 script {
                     gv.commitVersionUpdate()
                 }
