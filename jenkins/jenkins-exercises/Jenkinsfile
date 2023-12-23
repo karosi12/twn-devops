@@ -24,7 +24,7 @@ pipeline {
             //     expression {
             //         return env.GIT_BRANCH == "main"
             //     }
-            // }
+            //  }
             steps {
                 script {
                     gv.incrementVersion()
