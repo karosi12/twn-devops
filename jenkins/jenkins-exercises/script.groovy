@@ -44,8 +44,9 @@ def buildAndPushDockerImage(){
 def commitVersionUpdate(){
     withCredentials([usernamePassword(credentialsId: 'github-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
         // git config here for the first time run
-        sh 'git config --global user.email  "jenkins@example.com"'
+        // sh 'git config --global user.email  "jenkins@example.com"'
         sh 'git config --global user.name $USER'
+        sh 'git config --global user.name $PASS'
         sh 'git remote set-url origin https://$USER:$PASS@github.com/$USER/twn-devops.git'
         sh 'git add .'
         sh 'git commit -m "ci: version bump"'
