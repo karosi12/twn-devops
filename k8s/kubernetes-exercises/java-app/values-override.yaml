@@ -2,7 +2,7 @@ appName: java-app
 appReplicas: 3
 registrySecret: my-registry-key
 appContainerName: javamysqlapp
-appImage: nanajanashia/demo-app
+appImage: karosi12/java-app:v1
 appVersion: java-mysql-app
 containerPort: 8080
 

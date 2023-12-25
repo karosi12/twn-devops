@@ -1,0 +1,170 @@
+* 
+* ==> Audit <==
+* |--------------|------------------------|----------|------|---------|---------------------|---------------------|
+|   Command    |          Args          | Profile  | User | Version |     Start Time      |      End Time       |
+|--------------|------------------------|----------|------|---------|---------------------|---------------------|
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 07 Nov 23 13:02 CAT | 07 Nov 23 13:29 CAT |
+| start        | --vm-driver docker     | minikube | pro  | v1.31.2 | 07 Nov 23 21:53 CAT |                     |
+| start        | --vm-driver hyperkit   | minikube | pro  | v1.31.2 | 07 Nov 23 21:53 CAT | 07 Nov 23 21:55 CAT |
+| start        | --vm-driver=hypervisor | minikube | pro  | v1.31.2 | 09 Nov 23 13:19 CAT |                     |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 09 Nov 23 13:19 CAT |                     |
+| start        | --vm-driver docker     | minikube | pro  | v1.31.2 | 09 Nov 23 14:02 CAT |                     |
+| start        | --vm-driver docker     | minikube | pro  | v1.31.2 | 09 Nov 23 14:05 CAT |                     |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 09 Nov 23 14:06 CAT | 09 Nov 23 14:07 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 09 Nov 23 21:53 CAT | 09 Nov 23 21:53 CAT |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 09 Nov 23 21:54 CAT | 09 Nov 23 22:12 CAT |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 10 Nov 23 10:12 CAT | 10 Nov 23 10:14 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 10 Nov 23 10:17 CAT | 10 Nov 23 10:17 CAT |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 10 Nov 23 22:41 CAT |                     |
+| update-check |                        | minikube | pro  | v1.31.2 | 15 Nov 23 15:56 CAT | 15 Nov 23 15:56 CAT |
+| update-check |                        | minikube | pro  | v1.31.2 | 17 Nov 23 10:52 CAT | 17 Nov 23 10:52 CAT |
+| start        | --vm-driver=hypervisor | minikube | pro  | v1.31.2 | 21 Nov 23 00:35 CAT |                     |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 21 Nov 23 00:35 CAT | 21 Nov 23 00:36 CAT |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 21 Nov 23 00:46 CAT | 21 Nov 23 00:47 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 21 Nov 23 01:17 CAT | 21 Nov 23 01:17 CAT |
+| start        | --vm-driver=hyperkit   | minikube | pro  | v1.31.2 | 21 Nov 23 07:48 CAT | 21 Nov 23 07:49 CAT |
+| update-check |                        | minikube | pro  | v1.31.2 | 21 Nov 23 15:52 CAT | 21 Nov 23 15:52 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 21 Nov 23 23:11 CAT | 21 Nov 23 23:11 CAT |
+| update-check |                        | minikube | pro  | v1.31.2 | 03 Dec 23 21:02 CAT | 03 Dec 23 21:02 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 05 Dec 23 13:10 CAT | 05 Dec 23 13:10 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 06 Dec 23 07:24 CAT | 06 Dec 23 07:24 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 06 Dec 23 09:23 CAT | 06 Dec 23 09:23 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 06 Dec 23 12:46 CAT | 06 Dec 23 12:46 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 07 Dec 23 02:22 CAT | 07 Dec 23 02:23 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 09 Dec 23 19:04 CAT | 09 Dec 23 19:05 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 10 Dec 23 13:26 CAT | 10 Dec 23 13:27 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 10 Dec 23 18:04 CAT | 10 Dec 23 18:04 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 11 Dec 23 10:38 CAT | 11 Dec 23 10:38 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 11 Dec 23 17:00 CAT | 11 Dec 23 17:00 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 15 Dec 23 13:56 CAT | 15 Dec 23 13:57 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 15 Dec 23 22:43 CAT | 15 Dec 23 22:43 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 16 Dec 23 08:16 CAT |                     |
+| update-check |                        | minikube | pro  | v1.32.0 | 16 Dec 23 08:24 CAT | 16 Dec 23 08:24 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 16 Dec 23 13:24 CAT | 16 Dec 23 13:27 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 16 Dec 23 19:27 CAT | 16 Dec 23 19:27 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 18 Dec 23 09:59 CAT | 18 Dec 23 09:59 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 18 Dec 23 10:06 CAT | 18 Dec 23 10:06 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 21 Dec 23 07:35 CAT | 21 Dec 23 07:35 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 22 Dec 23 16:41 CAT | 22 Dec 23 16:41 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 23 Dec 23 19:23 CAT | 23 Dec 23 19:24 CAT |
+| addons       | enable ingress         | minikube | pro  | v1.31.2 | 23 Dec 23 20:48 CAT |                     |
+| tunnel       |                        | minikube | pro  | v1.31.2 | 23 Dec 23 21:02 CAT |                     |
+| stop         |                        | minikube | pro  | v1.31.2 | 23 Dec 23 21:30 CAT | 23 Dec 23 21:30 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 23 Dec 23 23:09 CAT |                     |
+| stop         |                        | minikube | pro  | v1.31.2 | 23 Dec 23 23:09 CAT | 23 Dec 23 23:10 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 23 Dec 23 23:10 CAT | 23 Dec 23 23:11 CAT |
+| stop         |                        | minikube | pro  | v1.31.2 | 23 Dec 23 23:28 CAT | 23 Dec 23 23:28 CAT |
+| update-check |                        | minikube | pro  | v1.32.0 | 24 Dec 23 07:42 CAT | 24 Dec 23 07:42 CAT |
+| start        |                        | minikube | pro  | v1.31.2 | 24 Dec 23 23:36 EAT |                     |
+| start        |                        | minikube | pro  | v1.31.2 | 24 Dec 23 23:37 EAT |                     |
+|--------------|------------------------|----------|------|---------|---------------------|---------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2023/12/24 23:37:59
+Running on machine: Kayode-MacBook-Pro
+Binary: Built with gc go1.21.0 for darwin/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1224 23:37:59.174043    9277 out.go:296] Setting OutFile to fd 1 ...
+I1224 23:37:59.174449    9277 out.go:348] isatty.IsTerminal(1) = true
+I1224 23:37:59.174453    9277 out.go:309] Setting ErrFile to fd 2...
+I1224 23:37:59.174459    9277 out.go:348] isatty.IsTerminal(2) = true
+I1224 23:37:59.174649    9277 root.go:338] Updating PATH: /Users/pro/.minikube/bin
+W1224 23:37:59.174765    9277 root.go:314] Error reading config file at /Users/pro/.minikube/config/config.json: open /Users/pro/.minikube/config/config.json: no such file or directory
+I1224 23:37:59.176948    9277 out.go:303] Setting JSON to false
+I1224 23:37:59.216205    9277 start.go:128] hostinfo: {"hostname":"Kayode-MacBook-Pro.local","uptime":53752,"bootTime":1703396527,"procs":633,"os":"darwin","platform":"darwin","platformFamily":"Standalone Workstation","platformVersion":"14.1","kernelVersion":"23.1.0","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"d792486d-af12-5d8a-8f72-d81890895c1d"}
+W1224 23:37:59.216349    9277 start.go:136] gopshost.Virtualization returned error: not implemented yet
+I1224 23:37:59.236528    9277 out.go:177] 😄  minikube v1.31.2 on Darwin 14.1
+I1224 23:37:59.275048    9277 notify.go:220] Checking for updates...
+I1224 23:37:59.275777    9277 config.go:182] Loaded profile config "minikube": Driver=hyperkit, ContainerRuntime=docker, KubernetesVersion=v1.27.4
+I1224 23:37:59.275948    9277 driver.go:373] Setting default libvirt URI to qemu:///system
+I1224 23:37:59.276586    9277 main.go:141] libmachine: Found binary path at /Users/pro/.minikube/bin/docker-machine-driver-hyperkit
+I1224 23:37:59.276694    9277 main.go:141] libmachine: Launching plugin server for driver hyperkit
+I1224 23:37:59.289429    9277 main.go:141] libmachine: Plugin server listening at address 127.0.0.1:52669
+I1224 23:37:59.289946    9277 main.go:141] libmachine: () Calling .GetVersion
+I1224 23:37:59.290601    9277 main.go:141] libmachine: Using API Version  1
+I1224 23:37:59.290610    9277 main.go:141] libmachine: () Calling .SetConfigRaw
+I1224 23:37:59.290887    9277 main.go:141] libmachine: () Calling .GetMachineName
+I1224 23:37:59.291071    9277 main.go:141] libmachine: (minikube) Calling .DriverName
+I1224 23:37:59.321831    9277 out.go:177] ✨  Using the hyperkit driver based on existing profile
+I1224 23:37:59.359414    9277 start.go:298] selected driver: hyperkit
+I1224 23:37:59.359430    9277 start.go:902] validating driver "hyperkit" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube-builds/iso/16971/minikube-v1.31.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.40@sha256:8cadf23777709e43eca447c47a45f5a4635615129267ce025193040ec92a1631 Memory:6000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperkit HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.27.4 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.64.2 Port:8443 KubernetesVersion:v1.27.4 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0}
+I1224 23:37:59.359621    9277 start.go:913] status for hyperkit: {Installed:true Healthy:true Running:true NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I1224 23:37:59.359869    9277 install.go:52] acquiring lock: {Name:mk4023283b30b374c3f04c8805d539e68824c0b8 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1224 23:37:59.360066    9277 install.go:117] Validating docker-machine-driver-hyperkit, PATH=/Users/pro/.minikube/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/opt/openjdk/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+I1224 23:37:59.372604    9277 install.go:137] /Users/pro/.minikube/bin/docker-machine-driver-hyperkit version is 1.31.2
+I1224 23:37:59.378790    9277 install.go:79] stdout: /Users/pro/.minikube/bin/docker-machine-driver-hyperkit
+I1224 23:37:59.378819    9277 install.go:81] /Users/pro/.minikube/bin/docker-machine-driver-hyperkit looks good
+I1224 23:37:59.379120    9277 cni.go:84] Creating CNI manager for ""
+I1224 23:37:59.379136    9277 cni.go:158] "hyperkit" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I1224 23:37:59.379151    9277 start_flags.go:319] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube-builds/iso/16971/minikube-v1.31.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.40@sha256:8cadf23777709e43eca447c47a45f5a4635615129267ce025193040ec92a1631 Memory:6000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperkit HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.27.4 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:192.168.64.2 Port:8443 KubernetesVersion:v1.27.4 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/Users:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0}
+I1224 23:37:59.379379    9277 iso.go:125] acquiring lock: {Name:mkc3edb1079f4fdfde44f997d82b54fbf7900b52 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1224 23:37:59.417982    9277 out.go:177] 👍  Starting control plane node minikube in cluster minikube
+I1224 23:37:59.435977    9277 preload.go:132] Checking if preload exists for k8s version v1.27.4 and runtime docker
+I1224 23:37:59.436070    9277 preload.go:148] Found local preload: /Users/pro/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.27.4-docker-overlay2-amd64.tar.lz4
+I1224 23:37:59.436099    9277 cache.go:57] Caching tarball of preloaded images
+I1224 23:37:59.436315    9277 preload.go:174] Found /Users/pro/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.27.4-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I1224 23:37:59.436330    9277 cache.go:60] Finished verifying existence of preloaded tar for  v1.27.4 on docker
+I1224 23:37:59.436474    9277 profile.go:148] Saving config to /Users/pro/.minikube/profiles/minikube/config.json ...
+I1224 23:37:59.437421    9277 start.go:365] acquiring machines lock for minikube: {Name:mk913cade96e46f3d82482cc02daa23d56c575d3 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+W1224 23:50:59.418960    9277 start.go:672] error starting host: boot lock: timeout acquiring mutex
+I1224 23:50:59.419873    9277 main.go:141] libmachine: Found binary path at /Users/pro/.minikube/bin/docker-machine-driver-hyperkit
+I1224 23:50:59.419904    9277 main.go:141] libmachine: Launching plugin server for driver hyperkit
+I1224 23:50:59.436030    9277 main.go:141] libmachine: Plugin server listening at address 127.0.0.1:52934
+I1224 23:50:59.436569    9277 main.go:141] libmachine: () Calling .GetVersion
+I1224 23:50:59.437097    9277 main.go:141] libmachine: Using API Version  1
+I1224 23:50:59.437123    9277 main.go:141] libmachine: () Calling .SetConfigRaw
+I1224 23:50:59.437507    9277 main.go:141] libmachine: () Calling .GetMachineName
+I1224 23:50:59.437979    9277 main.go:141] libmachine: Found binary path at /Users/pro/.minikube/bin/docker-machine-driver-hyperkit
+I1224 23:50:59.438010    9277 main.go:141] libmachine: Launching plugin server for driver hyperkit
+I1224 23:50:59.448923    9277 main.go:141] libmachine: Plugin server listening at address 127.0.0.1:52936
+I1224 23:50:59.449400    9277 main.go:141] libmachine: () Calling .GetVersion
+I1224 23:50:59.449902    9277 main.go:141] libmachine: Using API Version  1
+I1224 23:50:59.449918    9277 main.go:141] libmachine: () Calling .SetConfigRaw
+I1224 23:50:59.450224    9277 main.go:141] libmachine: () Calling .GetMachineName
+I1224 23:50:59.450395    9277 main.go:141] libmachine: (minikube) Calling .GetState
+I1224 23:50:59.450517    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:50:59.450632    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:50:59.452605    9277 main.go:141] libmachine: (minikube) Calling .DriverName
+I1224 23:50:59.491946    9277 out.go:177] 🔥  Deleting "minikube" in hyperkit ...
+I1224 23:50:59.512242    9277 main.go:141] libmachine: (minikube) Calling .Remove
+I1224 23:50:59.512681    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:50:59.512703    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:50:59.512921    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:50:59.515818    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:50:59.515894    9277 main.go:141] libmachine: (minikube) DBG | waiting for graceful shutdown
+I1224 23:51:00.516957    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:51:00.517006    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:51:00.520107    9277 main.go:141] libmachine: (minikube) DBG | waiting for graceful shutdown
+I1224 23:51:01.521351    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:51:01.521512    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:51:01.523339    9277 main.go:141] libmachine: (minikube) DBG | waiting for graceful shutdown
+I1224 23:51:02.524562    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:51:02.524747    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:51:02.527521    9277 main.go:141] libmachine: (minikube) DBG | waiting for graceful shutdown
+I1224 23:51:03.528699    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:51:03.528931    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:51:03.531640    9277 main.go:141] libmachine: (minikube) DBG | waiting for graceful shutdown
+I1224 23:51:04.532702    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+I1224 23:51:04.532789    9277 main.go:141] libmachine: (minikube) DBG | hyperkit pid from json: 9136
+I1224 23:51:04.534148    9277 main.go:141] libmachine: (minikube) DBG | sending sigkill
+I1224 23:51:04.534158    9277 main.go:141] libmachine: (minikube) DBG | exe=/Users/pro/.minikube/bin/docker-machine-driver-hyperkit uid=0
+W1224 23:51:07.687570    9277 out.go:239] 🤦  StartHost failed, but will try again: boot lock: timeout acquiring mutex
+I1224 23:51:07.687590    9277 start.go:687] Will try again in 5 seconds ...
+I1224 23:51:12.688664    9277 start.go:365] acquiring machines lock for minikube: {Name:mk913cade96e46f3d82482cc02daa23d56c575d3 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+W1225 00:04:12.702275    9277 out.go:239] 😿  Failed to start hyperkit VM. Running "minikube delete" may fix it: boot lock: timeout acquiring mutex
+I1225 00:04:12.723675    9277 out.go:177] 
+W1225 00:04:12.761739    9277 out.go:239] ❌  Exiting due to GUEST_PROVISION: error provisioning guest: Failed to start host: boot lock: timeout acquiring mutex
+W1225 00:04:12.761797    9277 out.go:239] 
+W1225 00:04:12.763001    9277 out.go:239] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I1225 00:04:12.835941    9277 out.go:177] 
+
+* 

@@ -4,7 +4,7 @@ metadata:
   name: java-app-ingress
 spec:
   rules:
-  - host: host-name-here
+  - host: my-java-app.com
     http:
       paths:
       - backend:
