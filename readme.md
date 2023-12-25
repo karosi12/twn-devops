@@ -28,13 +28,13 @@
 [Link](https://github.com/karosi12/twn-devops/tree/main/k8s)
 
 #### Kubernetes on AWS - EKS
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/eks)
 
 #### Infrastructure as Code with Terraform
 [Link](https://example.com)
 
 #### Programming with Python
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/python)
 
 #### Automation with Python
 [Link](https://example.com)
