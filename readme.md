@@ -25,7 +25,7 @@
 [Link](https://github.com/karosi12/twn-devops/blob/31f2034b19729494f932f08475d31d4a16c3ccf3/jenkins/jenkins-exercises/script.groovy#L44C19-L44C19)
 
 #### Container Orchestration with Kubernetes
-[Link](https://example.com)
+[Link](https://github.com/karosi12/twn-devops/tree/main/k8s)
 
 #### Kubernetes on AWS - EKS
 [Link](https://example.com)
