@@ -10,6 +10,8 @@ class Student(Person):
             self.lectures = lectures
 
     def lecture_list(self):
+        for lecture in self.lectures:
+            print(f"Attend {lecture}")
         return self.lectures
     
     def add_lecture(self, lecture):

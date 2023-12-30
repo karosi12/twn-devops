@@ -1,9 +1,6 @@
-from professor import Professor
+class Lecture():
 
-class Lecture(Professor):
-
-    def __init__(self, first_name, last_name, age, name, max_num_of_students, duration, professors,subjects=None):
-        super().__init__(first_name, last_name, age, subjects)
+    def __init__(self,  name, max_num_of_students, duration, professors):
         self.name = name
         self.max_num_of_students = max_num_of_students
         self.duration = duration
@@ -12,8 +9,8 @@ class Lecture(Professor):
     def professor_list(self):
         return self.professors
     
-    def lecture_durations(self):
+    def lecture_duration(self):
         return self.name +" "+ self.duration
     
-    def add_professor(self, names):
-        return self.professors + names
+    def add_professor(self, professors):
+        return self.professors + professors

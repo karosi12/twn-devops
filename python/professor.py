@@ -10,6 +10,8 @@ class Professor(Person):
             self.subjects = subjects
 
     def subject_list(self):
+        for subject in self.subjects:
+            print(f"Teaches {subject}")
         return self.subjects
     
     def add_subject(self, subject):
