@@ -1,0 +1,4 @@
+nexus_url: 
+nexus_user: kayode
+nexus_password: xxx
+jar_file_path: /Users/pro/Documents/devops/twn-devops-exercise/build-tools-exercises/build-tools-exercises-1.0-SNAPSHOT.jar
