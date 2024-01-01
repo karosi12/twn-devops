@@ -1,0 +1,22 @@
+- name: Push to Nexus repo
+  hosts: localhost
+  vars_files:
+    - nexus-vars
+  tasks:
+  - name: Push jar artifact to Nexus repo
+    no_log: True
+    
+    uri:
+      url: "{{ nexus_url }}/repository/maven-snapshots/com/my/{{ artifact_name }}/{{ artifact_version }}/{{ artifact_name }}-{{ artifact_version }}.jar"
+      
+      method: PUT
+      src: "{{ jar_file_path }}"
+      user: "{{ nexus_user }}"
+      password: "{{ nexus_password }}"
+      force_basic_auth: yes
+      
+      # With default "raw" body_format request form is too large, and causes 500 server error on Nexus (Form is larger than max length 200000), So we are setting it to 'json'
+      body_format: json
+      
+      status_code:
+      - 201
