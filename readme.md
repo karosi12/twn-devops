@@ -40,7 +40,7 @@
 [Link](https://github.com/karosi12/twn-devops/tree/main/automation-python)
 
 #### Configuration Management with Ansible
-[Link](https://github.com/karosi12/twn-devops/tree/main/ansible)
+[Link](https://github.com/karosi12/twn-devops/tree/main/build-tools-exercises/ansible)
 
 #### Monitoring with Prometheus
 [Link](https://github.com/karosi12/twn-devops/tree/main/prometheus)
